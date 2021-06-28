@@ -1,0 +1,12 @@
+for(N = 3:3:30)
+disp('-----------------------------------------')
+disp(sprintf('N = %i:', N))
+disp(sprintf('exp(-5.5) = %.16f', exp(-5.5)))
+disp(sprintf('approx_exp(-5.5) = %.16f', approx_exp2(N, -5.5)))
+disp(sprintf('       err = %.16f', abs(approx_exp2(N, -5.5) - exp(-5.5)) / exp(-5.5)))
+disp(sprintf('1 / approx_exp(-5.5) = %.16f', 1. / approx_exp2(N, 5.5)))
+disp(sprintf('       err = %.16f', abs(1. / approx_exp2(N, 5.5) - exp(-5.5)) / exp(-5.5)))
+disp(sprintf('(approx_exp(0.5))^-11 = %.16f', (approx_exp2(N, 0.5))^-11))
+disp(sprintf('       err = %.16f', abs((approx_exp2(N, 0.5)^-11 - exp(-5.5)) / exp(-5.5)))
+end
+disp('-----------------------------------------')
